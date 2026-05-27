@@ -6,7 +6,7 @@
 ## Script
 
 > "Most developers don't understand business. I do — I started in IT at college,
-> earned a bachelor's in accounting at UQAM, and spent 3 years in finance at RBC and Aviso Wealth.
+> earned a bachelor's in accounting in Montreal, and spent 3 years in the financial industry
 > But tech never left me. So I completed a full-stack bootcamp,
 > built real applications with the MERN stack, Java, C#, Python, and more —
 > and I'm back where I was always meant to be.
