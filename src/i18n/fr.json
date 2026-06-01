@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home":      "Accueil",
+    "portfolio": "Portfolio",
+    "links":     "Liens",
+    "contact":   "Contact"
+  },
+  "home": {
+    "label":    "Développeur Full-Stack · Professionnel en Finance",
+    "headline": "Frédérick\nKranjec-Larose",
+    "sub":      "Professionnel en finance reconverti en développeur full-stack — alliant plus de 3 ans d'expérience client avec une formation pratique en MERN, Java, C#, Python, et plus encore.",
+    "cta":      "Voir le Portfolio ↗",
+    "contact":  "Me Contacter ↗"
+  },
+  "portfolio": {
+    "label":          "01. Portfolio",
+    "headline":       "Expérience & Projets",
+    "sub":            "Professionnel en finance reconverti en développeur full-stack — alliant plus de 3 ans d'expérience client avec une formation pratique en MERN, Java, C#, Python, et plus encore.",
+    "downloadResume": "Télécharger le CV ↗",
+    "educationLabel": "02. Formation",
+    "educationTitle": "Parcours Académique",
+    "certLabel":      "03. Certifications",
+    "certTitle":      "Licences & Accréditations",
+    "workLabel":      "04. Expérience Professionnelle",
+    "workTitle":      "Historique Professionnel",
+    "projectsLabel":  "05. Projets",
+    "projectsTitle":  "Ce que j'ai construit"
+  },
+  "links": {
+    "label":    "LIENS",
+    "headline": "Tout en un seul endroit.",
+    "sub":      "Une liste organisée de mes profils, ressources et projets — accessibles depuis une seule page."
+  },
+  "contact": {
+    "label":       "CONTACT",
+    "headline":    "Travaillons ensemble.",
+    "sub":         "Vous avez un projet, une question ou souhaitez simplement échanger ? Envoyez-moi un message et je vous répondrai dès que possible.",
+    "directEmail": "Ou rejoignez-moi directement à",
+    "name":        "Nom",
+    "email":       "Courriel",
+    "message":     "Message",
+    "namePH":      "Frédérick Kranjec-Larose",
+    "emailPH":     "bonjour@exemple.com",
+    "messagePH":   "Parlez-moi de votre projet ou opportunité...",
+    "submit":      "Envoyer le message ↗",
+    "sending":     "Envoi en cours...",
+    "success":     "Message envoyé ! Je vous répondrai bientôt.",
+    "errorEmpty":  "Veuillez remplir tous les champs.",
+    "errorEmail":  "Veuillez entrer une adresse courriel valide.",
+    "errorFail":   "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "backoffice": {
+    "label":      "ADMIN",
+    "headline":   "Panneau d'Administration",
+    "messages":   "Messages",
+    "noMessages": "Aucun message pour l'instant.",
+    "loading":    "Chargement des messages...",
+    "colName":    "Nom",
+    "colEmail":   "Courriel",
+    "colDate":    "Date",
+    "colActions": "Actions",
+    "view":       "Voir",
+    "delete":     "Supprimer",
+    "logout":     "Déconnexion ↗",
+    "from":       "De",
+    "close":      "Fermer",
+    "deleteMsg":  "Supprimer le message",
+    "errorFetch": "Échec du chargement des messages. Veuillez réessayer.",
+    "errorDel":   "Échec de la suppression du message."
+  },
+  "login": {
+    "label":    "ADMIN",
+    "headline": "Panneau d'Administration",
+    "sub":      "Cette page n'est pas répertoriée publiquement.",
+    "email":    "Courriel",
+    "password": "Mot de passe",
+    "submit":   "Se connecter ↗",
+    "loading":  "Connexion en cours...",
+    "error":    "Identifiants invalides. Veuillez réessayer."
+  }
+}

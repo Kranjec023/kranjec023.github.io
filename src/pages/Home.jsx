@@ -15,13 +15,13 @@
 //   Prompt: "Abstract human connection network, dark background, white silhouettes
 //            of people connected by glowing lines, minimal, professional, cinematic"
 
-
 import '../styles/home.css'
-import heroImage from '../assets/hero-portrait.png'
+import heroImage   from '../assets/hero-portrait.png'
 import skillsImage from '../assets/network.png'
 import skillsImage2 from '../assets/human.png'
 import { FaCode, FaDatabase, FaCloud, FaLaptopCode, FaRobot } from 'react-icons/fa'
 import { FaUsers, FaBriefcase, FaGlobe, FaPuzzlePiece, FaBolt } from 'react-icons/fa'
+import { useLanguageContext } from '../context/LanguageContext'
 
 const techSkills = [
   { icon: <FaCode />,       title: 'Full-Stack Development', text: 'Building end-to-end web applications with React, Node.js, and REST APIs.' },
@@ -40,22 +40,20 @@ const softSkills = [
 ]
 
 export default function Home() {
+  const { t } = useLanguageContext()
+
   return (
     <div className="home">
 
       {/* ── SECTION 1: HERO ── */}
       <section className="home__hero" id="hero">
         <div className="home__hero-content">
-          <p className="home__label">FULL-STACK DEVELOPER</p>
-          <h1 className="home__headline">I build systems<br />that create impact.</h1>
-          <p className="home__intro">
-            Full-stack developer with a background in accounting and finance.
-            I transitioned from 3 years in the financial industry to building
-            real applications — because I write code that makes business sense.
-          </p>
+          <p className="home__label">{t('home.label')}</p>
+          <h1 className="home__headline">{t('home.headline')}</h1>
+          <p className="home__intro">{t('home.sub')}</p>
           <div className="home__ctas">
-            <a href="#/portfolio" className="btn btn--primary">View my work ↗</a>
-            <a href="#/contact"   className="btn btn--ghost">Get in touch ↗</a>
+            <a href="#/portfolio" className="btn btn--primary">{t('home.cta')}</a>
+            <a href="#/contact"   className="btn btn--ghost">{t('home.contact')}</a>
           </div>
           <p className="home__availability">
             <span className="home__dot">●</span> AVAILABLE FOR WORK &nbsp;·&nbsp; hello@fredkranjec.com
@@ -83,7 +81,7 @@ export default function Home() {
 
       {/* ── SECTION 3: SOFT SKILLS ── */}
       <section className="home__soft" id="soft-skills">
-        <p className="home__section-label">03. Soft Skills & Talents</p>
+        <p className="home__section-label">03. Soft Skills &amp; Talents</p>
         <h2 className="home__section-title">What I bring to the team</h2>
         <div className="home__skills-grid">
           {softSkills.map(({ icon, title, text }) => (
@@ -98,8 +96,8 @@ export default function Home() {
 
       {/* ── IMAGES ── */}
       <section className="home__images-row">
-        <img src={skillsImage} alt="Abstract tech network - Technical Skills" />
-        <img src={skillsImage2}  alt="Abstract human connection network - Soft Skills" />
+        <img src={skillsImage}  alt="Abstract tech network - Technical Skills" />
+        <img src={skillsImage2} alt="Abstract human connection network - Soft Skills" />
       </section>
 
     </div>

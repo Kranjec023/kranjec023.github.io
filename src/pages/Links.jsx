@@ -21,78 +21,79 @@ import portfolioImg    from '../assets/network.png'
 import freecodecampImg from '../assets/link-freecodecamp.png'
 import ztmImg          from '../assets/link-ztm.png'
 
+import { useLanguageContext } from '../context/LanguageContext'
+
 const links = [
   {
-    image:       githubImg,
-    alt:         'GitHub logo on dark background',
-    title:       'GitHub Profile',
+    image:    githubImg,
+    alt:      'GitHub logo on dark background',
+    title:    'GitHub Profile',
     description: 'Explore my repositories, open-source contributions, and project source code. All my major projects are publicly available.',
-    url:         'https://github.com/Kranjec023',
-    external:    true,
+    url:      'https://github.com/Kranjec023',
+    external: true,
   },
   {
-    image:       linkedinImg,
-    alt:         'LinkedIn logo on dark background',
-    title:       'LinkedIn',
+    image:    linkedinImg,
+    alt:      'LinkedIn logo on dark background',
+    title:    'LinkedIn',
     description: 'My professional profile — full work history, certifications, and recommendations from colleagues and managers.',
-    url:         'https://linkedin.com/in/frédérick-kranjec-larose-052835110',
-    external:    true,
+    url:      'https://linkedin.com/in/frédérick-kranjec-larose-052835110',
+    external: true,
   },
   {
-    image:       codeboxxImg,
-    alt:         'CodeBoxx Technology logo on dark background',
-    title:       'CodeBoxx Technology',
+    image:    codeboxxImg,
+    alt:      'CodeBoxx Technology logo on dark background',
+    title:    'CodeBoxx Technology',
     description: 'The bootcamp where I trained as a full-stack developer. Covers the MERN stack, DevOps, CI/CD, cloud deployment, and more.',
-    url:         'https://codeboxx.biz',
-    external:    true,
+    url:      'https://codeboxx.biz',
+    external: true,
   },
   {
-    image:       resumeImg,
-    alt:         'Minimalist document icon representing a resume — AI-generated with Midjourney',
-    title:       'Resume / CV',
+    image:    resumeImg,
+    alt:      'Minimalist document icon representing a resume — AI-generated with Midjourney',
+    title:    'Resume / CV',
     description: 'Download or view my full resume as a PDF. Includes education, professional experience, technical skills, and certifications.',
-    url:         resumePDF,
-    external:    true,
-    download:    true,
+    url:      resumePDF,
+    external: true,
+    download: true,
   },
   {
-    image:       portfolioImg,
-    alt:         'Abstract human network visualization representing the portfolio page — AI-generated with Midjourney',
-    title:       'Portfolio Page',
+    image:    portfolioImg,
+    alt:      'Abstract human network visualization representing the portfolio page — AI-generated with Midjourney',
+    title:    'Portfolio Page',
     description: 'A deep dive into my projects, work history, and academic background — all in one place.',
-    url:         '#/portfolio',
-    external:    false,
+    url:      '#/portfolio',
+    external: false,
   },
   {
-    image:       freecodecampImg,
-    alt:         'freeCodeCamp logo — white flame on dark background',
-    title:       'freeCodeCamp',
+    image:    freecodecampImg,
+    alt:      'freeCodeCamp logo — white flame on dark background',
+    title:    'freeCodeCamp',
     description: 'Free online platform where I completed certifications in JavaScript Algorithms & Data Structures. Thousands of coding challenges and projects.',
-    url:         'https://www.freecodecamp.org',
-    external:    true,
+    url:      'https://www.freecodecamp.org',
+    external: true,
   },
   {
-    image:       ztmImg,
-    alt:         'Zero to Mastery (ZTM) logo',
-    title:       'Zero to Mastery',
+    image:    ztmImg,
+    alt:      'Zero to Mastery (ZTM) logo',
+    title:    'Zero to Mastery',
     description: 'Online learning platform where I completed the AI Machine Learning and Data Science Bootcamp. Industry-level courses taught by senior developers.',
-    url:         'https://zerotomastery.io',
-    external:    true,
+    url:      'https://zerotomastery.io',
+    external: true,
   },
 ]
 
 export default function Links() {
+  const { t } = useLanguageContext()
+
   return (
     <div className="links">
 
       {/* ── HERO ── */}
       <section className="links__hero">
-        <p className="links__label">LINKS</p>
-        <h1 className="links__headline">Everything<br />in one place.</h1>
-        <p className="links__sub">
-          A curated list of my profiles, resources, and projects —
-          all accessible from one page.
-        </p>
+        <p className="links__label">{t('links.label')}</p>
+        <h1 className="links__headline">{t('links.headline')}</h1>
+        <p className="links__sub">{t('links.sub')}</p>
       </section>
 
       {/* ── LINKS GRID ── */}

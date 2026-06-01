@@ -1,18 +1,22 @@
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import '../styles/header.css'
-import { useThemeContext } from '../context/ThemeContext'
+import { useThemeContext }    from '../context/ThemeContext'
+import { useLanguageContext } from '../context/LanguageContext'
 
-const navLinks = [
-  { label: '01. Home',      to: '/' },
-  { label: '02. About',     to: '/about' },
-  { label: '03. Portfolio', to: '/portfolio' },
-  { label: '04. Links',     to: '/links' },
-  { label: '05. Contact',   to: '/contact' },
-]
+const LANG_LABELS = { en: 'EN', fr: 'FR', de: 'DE' }
 
 export default function Header() {
-  const { theme, toggleTheme } = useThemeContext()
+  const { theme, toggleTheme }       = useThemeContext()
+  const { language, toggleLanguage, t } = useLanguageContext()
+
+  const navLinks = [
+    { label: `01. ${t('nav.home')}`,      to: '/' },
+    { label: '02. About',                 to: '/about' },
+    { label: `03. ${t('nav.portfolio')}`, to: '/portfolio' },
+    { label: `04. ${t('nav.links')}`,     to: '/links' },
+    { label: `05. ${t('nav.contact')}`,   to: '/contact' },
+  ]
 
   return (
     <header className="header">
@@ -33,6 +37,14 @@ export default function Header() {
       </nav>
       <div className="header__right">
         <button
+          className="header__lang-toggle"
+          onClick={toggleLanguage}
+          aria-label={`Switch language — current: ${language.toUpperCase()}`}
+          title="Switch language"
+        >
+          {LANG_LABELS[language]}
+        </button>
+        <button
           className="header__theme-toggle"
           onClick={toggleTheme}
           aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
@@ -40,7 +52,7 @@ export default function Header() {
         >
           {theme === 'dark' ? '☀︎' : '☾'}
         </button>
-        <Link to="/contact" className="header__cta">Let&apos;s talk ↗</Link>
+        <Link to="/contact" className="header__cta">{t('nav.contact')} ↗</Link>
       </div>
     </header>
   )

@@ -57,6 +57,30 @@
   border-color: var(--color-text-primary);
 }
 
+/* ── LANGUAGE TOGGLE ── */
+.header__lang-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  width: 2.5rem;
+  height: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.header__lang-toggle:hover {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
 /* ── THEME TOGGLE ── */
 .header__theme-toggle {
   background: none;
