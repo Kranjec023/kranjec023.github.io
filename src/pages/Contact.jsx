@@ -1,21 +1,20 @@
 import { useState } from 'react'
 import '../styles/contact.css'
 import { supabase } from '../lib/supabaseClient'
+import { useLanguageContext } from '../context/LanguageContext'
 
 const INITIAL_FORM = { name: '', email: '', message: '' }
 
 function validateForm({ name, email, message }) {
-  if (!name.trim() || !email.trim() || !message.trim()) {
-    return 'Please fill in all fields.'
-  }
+  if (!name.trim() || !email.trim() || !message.trim()) return 'contact.errorEmpty'
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!emailRegex.test(email)) {
-    return 'Please enter a valid email address.'
-  }
+  if (!emailRegex.test(email)) return 'contact.errorEmail'
   return null
 }
 
 export default function Contact() {
+  const { t } = useLanguageContext()
+
   const [form,    setForm]    = useState(INITIAL_FORM)
   const [error,   setError]   = useState(null)
   const [success, setSuccess] = useState(false)
@@ -30,9 +29,9 @@ export default function Contact() {
   async function handleSubmit(e) {
     e.preventDefault()
 
-    const validationError = validateForm(form)
-    if (validationError) {
-      setError(validationError)
+    const validationKey = validateForm(form)
+    if (validationKey) {
+      setError(t(validationKey))
       return
     }
 
@@ -46,7 +45,7 @@ export default function Contact() {
     setLoading(false)
 
     if (supabaseError) {
-      setError('Something went wrong. Please try again.')
+      setError(t('contact.errorFail'))
       return
     }
 
@@ -63,14 +62,11 @@ export default function Contact() {
       {/* ── HERO ── */}
       <section className="contact__hero">
         <div className="contact__hero-content">
-          <p className="contact__label">CONTACT</p>
-          <h1 className="contact__headline">Let&apos;s work<br />together.</h1>
-          <p className="contact__sub">
-            Have a project in mind, a question, or just want to connect?
-            Send me a message and I&apos;ll get back to you as soon as possible.
-          </p>
+          <p className="contact__label">{t('contact.label')}</p>
+          <h1 className="contact__headline">{t('contact.headline')}</h1>
+          <p className="contact__sub">{t('contact.sub')}</p>
           <p className="contact__email">
-            Or reach me directly at{' '}
+            {t('contact.directEmail')}{' '}
             <a href="mailto:fredkranjec@gmail.com">fredkranjec@gmail.com</a>
           </p>
         </div>
@@ -82,13 +78,13 @@ export default function Contact() {
 
           {/* NAME */}
           <div className="form-field">
-            <label className="form-field__label" htmlFor="name">Name</label>
+            <label className="form-field__label" htmlFor="name">{t('contact.name')}</label>
             <input
               id="name"
               name="name"
               type="text"
               className="form-field__input"
-              placeholder="Frédérick Kranjec-Larose"
+              placeholder={t('contact.namePH')}
               value={form.name}
               onChange={handleChange}
               required
@@ -97,13 +93,13 @@ export default function Contact() {
 
           {/* EMAIL */}
           <div className="form-field">
-            <label className="form-field__label" htmlFor="email">Email</label>
+            <label className="form-field__label" htmlFor="email">{t('contact.email')}</label>
             <input
               id="email"
               name="email"
               type="email"
               className="form-field__input"
-              placeholder="hello@example.com"
+              placeholder={t('contact.emailPH')}
               value={form.email}
               onChange={handleChange}
               required
@@ -112,12 +108,12 @@ export default function Contact() {
 
           {/* MESSAGE */}
           <div className="form-field">
-            <label className="form-field__label" htmlFor="message">Message</label>
+            <label className="form-field__label" htmlFor="message">{t('contact.message')}</label>
             <textarea
               id="message"
               name="message"
               className="form-field__textarea"
-              placeholder="Tell me about your project or opportunity..."
+              placeholder={t('contact.messagePH')}
               rows={6}
               value={form.message}
               onChange={handleChange}
@@ -137,7 +133,7 @@ export default function Contact() {
           {success && (
             <div className="form-feedback form-feedback--success">
               <span className="form-feedback__icon">✓</span>
-              Message sent! I&apos;ll get back to you soon.
+              {t('contact.success')}
             </div>
           )}
 
@@ -147,7 +143,7 @@ export default function Contact() {
             className="btn btn--primary contact__submit"
             disabled={isDisabled}
           >
-            {loading ? 'Sending...' : 'Send Message ↗'}
+            {loading ? t('contact.sending') : t('contact.submit')}
           </button>
 
         </form>

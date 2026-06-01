@@ -15,8 +15,10 @@ import bannerImage   from '../assets/heroPortfolio.png'
 import projectsImage from '../assets/projectBanner.png'
 import resumePDF     from '../assets/resume/frederick-kranjec-larose-resume.pdf'
 
-import codeBloggsImg   from '../assets/project-codebloggs.png'
-import portfolioImg    from '../assets/project-portfolio.png'
+import codeBloggsImg from '../assets/project-codebloggs.png'
+import portfolioImg  from '../assets/project-portfolio.png'
+
+import { useLanguageContext } from '../context/LanguageContext'
 
 const education = [
   {
@@ -80,21 +82,19 @@ const projects = [
 ]
 
 export default function Portfolio() {
+  const { t } = useLanguageContext()
+
   return (
     <div className="portfolio">
 
       {/* ── HERO BANNER ── */}
       <section className="portfolio__hero">
         <div className="portfolio__hero-content">
-          <p className="portfolio__label">01. Portfolio</p>
-          <h1 className="portfolio__headline">Experience &<br />Projects</h1>
-          <p className="portfolio__sub">
-            Finance professional turned full-stack developer — combining 3+ years
-            of client-facing experience with hands-on training in the MERN stack,
-            Java, C#, Python, and more.
-          </p>
+          <p className="portfolio__label">{t('portfolio.label')}</p>
+          <h1 className="portfolio__headline">{t('portfolio.headline')}</h1>
+          <p className="portfolio__sub">{t('portfolio.sub')}</p>
           <a href={resumePDF} download className="btn btn--primary">
-            Download Resume ↗
+            {t('portfolio.downloadResume')}
           </a>
         </div>
         <div className="portfolio__hero-image">
@@ -104,8 +104,8 @@ export default function Portfolio() {
 
       {/* ── SECTION 1: EDUCATION ── */}
       <section className="portfolio__section" id="education">
-        <p className="portfolio__section-label">02. Education</p>
-        <h2 className="portfolio__section-title">Academic Background</h2>
+        <p className="portfolio__section-label">{t('portfolio.educationLabel')}</p>
+        <h2 className="portfolio__section-title">{t('portfolio.educationTitle')}</h2>
         <div className="portfolio__timeline">
           {education.map(({ institution, degree, dates, tech }) => (
             <div className="timeline-entry" key={institution}>
@@ -122,8 +122,8 @@ export default function Portfolio() {
 
       {/* ── SECTION 2: CERTIFICATIONS ── */}
       <section className="portfolio__section" id="certifications">
-        <p className="portfolio__section-label">03. Certifications</p>
-        <h2 className="portfolio__section-title">Licences & Credentials</h2>
+        <p className="portfolio__section-label">{t('portfolio.certLabel')}</p>
+        <h2 className="portfolio__section-title">{t('portfolio.certTitle')}</h2>
         <ul className="portfolio__certifications">
           {certifications.map(cert => (
             <li key={cert} className="certification-item">
@@ -136,8 +136,8 @@ export default function Portfolio() {
 
       {/* ── SECTION 3: WORK EXPERIENCE ── */}
       <section className="portfolio__section" id="work">
-        <p className="portfolio__section-label">04. Work Experience</p>
-        <h2 className="portfolio__section-title">Professional History</h2>
+        <p className="portfolio__section-label">{t('portfolio.workLabel')}</p>
+        <h2 className="portfolio__section-title">{t('portfolio.workTitle')}</h2>
         <div className="portfolio__timeline">
           {work.map(({ title, organization, dates, description }) => (
             <div className="timeline-entry" key={title}>
@@ -154,8 +154,8 @@ export default function Portfolio() {
 
       {/* ── SECTION 4: PROJECTS ── */}
       <section className="portfolio__section" id="projects">
-        <p className="portfolio__section-label">05. Projects</p>
-        <h2 className="portfolio__section-title">What I&apos;ve built</h2>
+        <p className="portfolio__section-label">{t('portfolio.projectsLabel')}</p>
+        <h2 className="portfolio__section-title">{t('portfolio.projectsTitle')}</h2>
         <img
           src={projectsImage}
           alt="Abstract visualization representing software projects and code"
@@ -169,7 +169,7 @@ export default function Portfolio() {
               <div className="project-card__body">
                 <h3 className="project-card__title">{name}</h3>
                 <div className="project-card__tech">
-                  {tech.map(t => <span key={t} className="tech-tag">{t}</span>)}
+                  {tech.map(tag => <span key={tag} className="tech-tag">{tag}</span>)}
                 </div>
                 <p className="project-card__desc">{description}</p>
               </div>

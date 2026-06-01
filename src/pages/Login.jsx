@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react'
 import { useNavigate }         from 'react-router-dom'
 import '../styles/login.css'
 import { supabase } from '../lib/supabaseClient'
+import { useLanguageContext } from '../context/LanguageContext'
 
 export default function Login() {
   const navigate = useNavigate()
+  const { t } = useLanguageContext()
 
   const [email,    setEmail]    = useState('')
   const [password, setPassword] = useState('')
@@ -31,7 +33,7 @@ export default function Login() {
     setLoading(false)
 
     if (authError) {
-      setError('Invalid login credentials. Please try again.')
+      setError(t('login.error'))
       return
     }
 
@@ -44,15 +46,15 @@ export default function Login() {
     <div className="login">
       <div className="login__card">
 
-        <p className="login__label">ADMIN</p>
-        <h1 className="login__headline">Back Office</h1>
-        <p className="login__sub">This page is not publicly listed.</p>
+        <p className="login__label">{t('login.label')}</p>
+        <h1 className="login__headline">{t('login.headline')}</h1>
+        <p className="login__sub">{t('login.sub')}</p>
 
         <form className="login__form" onSubmit={handleSubmit} noValidate>
 
           {/* EMAIL */}
           <div className="form-field">
-            <label className="form-field__label" htmlFor="email">Email</label>
+            <label className="form-field__label" htmlFor="email">{t('login.email')}</label>
             <input
               id="email"
               type="email"
@@ -66,7 +68,7 @@ export default function Login() {
 
           {/* PASSWORD */}
           <div className="form-field">
-            <label className="form-field__label" htmlFor="password">Password</label>
+            <label className="form-field__label" htmlFor="password">{t('login.password')}</label>
             <input
               id="password"
               type="password"
@@ -92,7 +94,7 @@ export default function Login() {
             className="btn btn--primary login__submit"
             disabled={isDisabled}
           >
-            {loading ? 'Signing in...' : 'Sign In ↗'}
+            {loading ? t('login.loading') : t('login.submit')}
           </button>
 
         </form>

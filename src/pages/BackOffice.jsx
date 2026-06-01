@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useNavigate }                       from 'react-router-dom'
 import '../styles/backoffice.css'
 import { supabase } from '../lib/supabaseClient'
+import { useLanguageContext } from '../context/LanguageContext'
 
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleString('en-CA', {
@@ -15,11 +16,12 @@ function formatDate(dateStr) {
 
 export default function BackOffice() {
   const navigate = useNavigate()
+  const { t } = useLanguageContext()
 
   const [messages,  setMessages]  = useState([])
   const [loading,   setLoading]   = useState(true)
   const [error,     setError]     = useState(null)
-  const [selected,  setSelected]  = useState(null)   // message open in modal
+  const [selected,  setSelected]  = useState(null)
 
   // ── Auth Guard ──
   useEffect(() => {
@@ -41,12 +43,12 @@ export default function BackOffice() {
     setLoading(false)
 
     if (fetchError) {
-      setError('Failed to load messages. Please try again.')
+      setError(t('backoffice.errorFetch'))
       return
     }
 
     setMessages(data)
-  }, [])
+  }, [t])
 
   useEffect(() => { fetchMessages() }, [fetchMessages])
 
@@ -58,7 +60,7 @@ export default function BackOffice() {
       .eq('id', id)
 
     if (deleteError) {
-      setError('Failed to delete message.')
+      setError(t('backoffice.errorDel'))
       return
     }
 
@@ -87,25 +89,23 @@ export default function BackOffice() {
       {/* ── HEADER ── */}
       <div className="backoffice__topbar">
         <div>
-          <p className="backoffice__label">ADMIN</p>
-          <h1 className="backoffice__headline">Back Office</h1>
+          <p className="backoffice__label">{t('backoffice.label')}</p>
+          <h1 className="backoffice__headline">{t('backoffice.headline')}</h1>
         </div>
         <button className="btn btn--ghost backoffice__logout" onClick={handleLogout}>
-          Logout ↗
+          {t('backoffice.logout')}
         </button>
       </div>
 
       {/* ── MESSAGES SECTION ── */}
       <section className="backoffice__section">
         <h2 className="backoffice__section-title">
-          Messages
+          {t('backoffice.messages')}
           <span className="backoffice__count">{messages.length}</span>
         </h2>
 
-        {/* LOADING */}
-        {loading && <p className="backoffice__status">Loading messages...</p>}
+        {loading && <p className="backoffice__status">{t('backoffice.loading')}</p>}
 
-        {/* ERROR */}
         {error && (
           <div className="form-feedback form-feedback--error">
             <span className="form-feedback__icon">✗</span>
@@ -113,21 +113,19 @@ export default function BackOffice() {
           </div>
         )}
 
-        {/* EMPTY */}
         {!loading && !error && messages.length === 0 && (
-          <p className="backoffice__status">No messages yet.</p>
+          <p className="backoffice__status">{t('backoffice.noMessages')}</p>
         )}
 
-        {/* TABLE */}
         {!loading && messages.length > 0 && (
           <div className="backoffice__table-wrap">
             <table className="backoffice__table">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Date</th>
-                  <th>Actions</th>
+                  <th>{t('backoffice.colName')}</th>
+                  <th>{t('backoffice.colEmail')}</th>
+                  <th>{t('backoffice.colDate')}</th>
+                  <th>{t('backoffice.colActions')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -146,13 +144,13 @@ export default function BackOffice() {
                           className="backoffice__btn-view"
                           onClick={() => setSelected(msg)}
                         >
-                          View
+                          {t('backoffice.view')}
                         </button>
                         <button
                           className="backoffice__btn-delete"
                           onClick={() => handleDelete(msg.id)}
                         >
-                          Delete
+                          {t('backoffice.delete')}
                         </button>
                       </div>
                     </td>
@@ -185,9 +183,9 @@ export default function BackOffice() {
             </div>
 
             <div className="modal__meta">
-              <p><span>From</span> {selected.name}</p>
+              <p><span>{t('backoffice.from')}</span> {selected.name}</p>
               <p><span>Email</span> {selected.email}</p>
-              <p><span>Date</span> {formatDate(selected.created_at)}</p>
+              <p><span>{t('backoffice.colDate')}</span> {formatDate(selected.created_at)}</p>
             </div>
 
             <div className="modal__body">
@@ -199,13 +197,13 @@ export default function BackOffice() {
                 className="backoffice__btn-delete"
                 onClick={() => handleDelete(selected.id)}
               >
-                Delete Message
+                {t('backoffice.deleteMsg')}
               </button>
               <button
                 className="btn btn--ghost"
                 onClick={() => setSelected(null)}
               >
-                Close
+                {t('backoffice.close')}
               </button>
             </div>
           </div>
