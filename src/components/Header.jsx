@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import '../styles/header.css'
+import { useThemeContext } from '../context/ThemeContext'
 
 const navLinks = [
   { label: '01. Home',      to: '/' },
@@ -11,6 +12,8 @@ const navLinks = [
 ]
 
 export default function Header() {
+  const { theme, toggleTheme } = useThemeContext()
+
   return (
     <header className="header">
       <Link to="/" className="header__logo">
@@ -28,7 +31,17 @@ export default function Header() {
           </NavLink>
         ))}
       </nav>
-      <Link to="/contact" className="header__cta">Let&apos;s talk ↗</Link>
+      <div className="header__right">
+        <button
+          className="header__theme-toggle"
+          onClick={toggleTheme}
+          aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+        >
+          {theme === 'dark' ? '☀︎' : '☾'}
+        </button>
+        <Link to="/contact" className="header__cta">Let&apos;s talk ↗</Link>
+      </div>
     </header>
   )
 }

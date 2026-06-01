@@ -1,21 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-:root {
-  --color-bg: #0a0a0a;
-  --color-surface: #111111;
-  --color-border: #222222;
-  --color-text-primary: #ffffff;
-  --color-text-muted: #888888;
-  --color-accent: #ffffff;
-  --font-main: 'Inter', sans-serif;
-  --header-height: 64px;
-  --mobile-nav-height: 60px;
+/* ── DARK THEME (default) ── */
+:root,
+[data-theme="dark"] {
+  --color-bg:           #0a0a0a;
+  --color-surface:      #111111;
+  --color-border:       #222222;
+  --color-text-primary: #f0f0f0;
+  --color-text-muted:   #666666;
+  --color-accent:       #4caf50;
+  --font-main:          'Inter', sans-serif;
+  --header-height:      64px;
+  --mobile-nav-height:  60px;
 }
 
-*, *::before, *::after {
+/* ── LIGHT THEME ── */
+[data-theme="light"] {
+  --color-bg:           #ffffff;
+  --color-surface:      #f5f5f5;
+  --color-border:       #e0e0e0;
+  --color-text-primary: #0a0a0a;
+  --color-text-muted:   #888888;
+  --color-accent:       #2e7d32;
+}
+
+/* ── GLOBAL TRANSITION ── */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition:
+    background-color 0.25s ease,
+    border-color     0.25s ease,
+    color            0.25s ease;
 }
 
 html {
