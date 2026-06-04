@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 import '../styles/footer.css'
 
 const navLinks = [
-  { label: '01. Home',      to: '/' },
-  { label: '02. About',     to: '/about' },
-  { label: '03. Portfolio', to: '/portfolio' },
-  { label: '04. Links',     to: '/links' },
-  { label: '05. Contact',   to: '/contact' },
+  { label: 'Home',      to: '/' },
+  { label: 'About',     to: '/about' },
+  { label: 'Portfolio', to: '/portfolio' },
+  { label: 'Links',     to: '/links' },
+  { label: 'Contact',   to: '/contact' },
 ]
 
 export default function Footer() {

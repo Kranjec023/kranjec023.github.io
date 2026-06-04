@@ -1,6 +1,7 @@
 {
   "nav": {
     "home":      "Home",
+    "about":     "About",
     "portfolio": "Portfolio",
     "links":     "Links",
     "contact":   "Contact"
@@ -9,22 +10,36 @@
     "label":    "Full-Stack Developer · Finance Professional",
     "headline": "Frédérick\nKranjec-Larose",
     "sub":      "Finance professional turned full-stack developer — combining 3+ years of client-facing experience with hands-on training in the MERN stack, Java, C#, Python, and more.",
-    "cta":      "View Portfolio ↗",
-    "contact":  "Get in Touch ↗"
+    "cta":       "View Portfolio ↗",
+    "contact":   "Get in Touch ↗",
+    "available": "AVAILABLE FOR WORK",
+    "techLabel": "Technical Skills",
+    "techTitle": "What I build with",
+    "softLabel": "Soft Skills & Talents",
+    "softTitle": "What I bring to the team"
+  },
+  "about": {
+    "label":       "About Me",
+    "headline":    "Frédérick Kranjec-Larose",
+    "summary":     "I'm a full-stack developer passionate about building clean, functional systems that solve real problems. I work across the entire stack — from database design to polished front-end interfaces. With a background in finance and accounting, I bring a structured, analytical approach to every project. I care about readable code, thoughtful architecture, and products that actually make sense to use.",
+    "skillsLabel": "Skills & Technologies",
+    "skillsTitle": "What I Work With"
   },
   "portfolio": {
-    "label":          "01. Portfolio",
+    "label":          "Portfolio",
     "headline":       "Experience & Projects",
     "sub":            "Finance professional turned full-stack developer — combining 3+ years of client-facing experience with hands-on training in the MERN stack, Java, C#, Python, and more.",
     "downloadResume": "Download Resume ↗",
-    "educationLabel": "02. Education",
+    "educationLabel": "Education",
     "educationTitle": "Academic Background",
-    "certLabel":      "03. Certifications",
+    "certLabel":      "Certifications",
     "certTitle":      "Licences & Credentials",
-    "workLabel":      "04. Work Experience",
+    "workLabel":      "Work Experience",
     "workTitle":      "Professional History",
-    "projectsLabel":  "05. Projects",
-    "projectsTitle":  "What I've built"
+    "projectsLabel":     "Projects",
+    "projectsTitle":     "What I've built",
+    "credentialsLabel":  "Licences & Credentials",
+    "credentialsTitle":  "Certifications"
   },
   "links": {
     "label":    "LINKS",
@@ -66,7 +81,8 @@
     "close":      "Close",
     "deleteMsg":  "Delete Message",
     "errorFetch": "Failed to load messages. Please try again.",
-    "errorDel":   "Failed to delete message."
+    "errorDel":   "Failed to delete message.",
+    "message":    "Message"
   },
   "login": {
     "label":    "ADMIN",

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../styles/contact.css'
 import { supabase } from '../lib/supabaseClient'
 import { useLanguageContext } from '../context/LanguageContext'
+import skillsImage from '../assets/human.png'
 
 const INITIAL_FORM = { name: '', email: '', message: '' }
 
@@ -59,16 +60,15 @@ export default function Contact() {
   return (
     <div className="contact">
 
-      {/* ── HERO ── */}
+      {/* ── HERO — text left, image right ── */}
       <section className="contact__hero">
         <div className="contact__hero-content">
           <p className="contact__label">{t('contact.label')}</p>
           <h1 className="contact__headline">{t('contact.headline')}</h1>
           <p className="contact__sub">{t('contact.sub')}</p>
-          <p className="contact__email">
-            {t('contact.directEmail')}{' '}
-            <a href="mailto:fredkranjec@gmail.com">fredkranjec@gmail.com</a>
-          </p>
+        </div>
+        <div className="contact__hero-image">
+          <img src={skillsImage} alt="Abstract human connection network" />
         </div>
       </section>
 

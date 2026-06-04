@@ -7,7 +7,7 @@
   --color-surface:      #111111;
   --color-border:       #222222;
   --color-text-primary: #f0f0f0;
-  --color-text-muted:   #666666;
+  --color-text-muted:   #bbbbbb;
   --color-accent:       #4caf50;
   --font-main:          'Inter', sans-serif;
   --header-height:      64px;
@@ -20,7 +20,7 @@
   --color-surface:      #f5f5f5;
   --color-border:       #e0e0e0;
   --color-text-primary: #0a0a0a;
-  --color-text-muted:   #888888;
+  --color-text-muted:   #bbbbbb;
   --color-accent:       #2e7d32;
 }
 
@@ -61,4 +61,10 @@ img {
 
 ul {
   list-style: none;
+}
+
+/* ── MUTED TEXT ── */
+.muted, [class*="muted"], small {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
 }
