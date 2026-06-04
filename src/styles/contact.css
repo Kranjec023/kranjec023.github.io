@@ -2,8 +2,26 @@
 .contact__hero {
   padding: 5rem 6rem 3rem;
   border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
+.contact__hero-content {
+  flex: 1;
+}
+
+.contact__hero-image {
+  flex: 0 0 300px;
+}
+
+.contact__hero-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ── LABEL ── */
 .contact__label {
   font-size: 0.75rem;
   letter-spacing: 0.15em;
@@ -12,6 +30,7 @@
   margin-bottom: 1rem;
 }
 
+/* ── HEADLINE ── */
 .contact__headline {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
@@ -19,6 +38,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* ── SUB ── */
 .contact__sub {
   max-width: 480px;
   color: var(--color-text-muted);
@@ -43,10 +63,10 @@
 
 /* ── FORM ── */
 .contact__form {
-  max-width: 640px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  max-width: 560px;
 }
 
 /* ── FORM FIELDS ── */
@@ -131,7 +151,22 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .contact__hero    { padding: 3rem 1.5rem 2rem; }
-  .contact__section { padding: 2rem 1.5rem; }
-  .contact__submit  { width: 100%; text-align: center; }
+  .contact__hero {
+    padding: 3rem 1.5rem 2rem;
+    flex-direction: column;
+  }
+  .contact__hero-image {
+    flex: unset;
+    width: 100%;
+  }
+  .contact__section {
+    padding: 2rem 1.5rem;
+  }
+  .contact__form {
+    max-width: 100%;
+  }
+  .contact__submit {
+    width: 100%;
+    text-align: center;
+  }
 }

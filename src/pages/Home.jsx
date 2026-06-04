@@ -56,7 +56,7 @@ export default function Home() {
             <a href="#/contact"   className="btn btn--ghost">{t('home.contact')}</a>
           </div>
           <p className="home__availability">
-            <span className="home__dot">●</span> AVAILABLE FOR WORK &nbsp;·&nbsp; hello@fredkranjec.com
+            <span className="home__dot">●</span> {t('home.available')} &nbsp;
           </p>
         </div>
         <div className="home__hero-image">
@@ -66,8 +66,8 @@ export default function Home() {
 
       {/* ── SECTION 2: TECHNICAL SKILLS ── */}
       <section className="home__skills" id="skills">
-        <p className="home__section-label">02. Technical Skills</p>
-        <h2 className="home__section-title">What I build with</h2>
+        <p className="home__section-label">{t('home.techLabel')}</p>
+        <h2 className="home__section-title">{t('home.techTitle')}</h2>
         <div className="home__skills-grid">
           {techSkills.map(({ icon, title, text }) => (
             <div className="skill-card" key={title}>
@@ -81,8 +81,8 @@ export default function Home() {
 
       {/* ── SECTION 3: SOFT SKILLS ── */}
       <section className="home__soft" id="soft-skills">
-        <p className="home__section-label">03. Soft Skills &amp; Talents</p>
-        <h2 className="home__section-title">What I bring to the team</h2>
+        <p className="home__section-label">{t('home.softLabel')}</p>
+        <h2 className="home__section-title">{t('home.softTitle')}</h2>
         <div className="home__skills-grid">
           {softSkills.map(({ icon, title, text }) => (
             <div className="skill-card" key={title}>
@@ -97,7 +97,6 @@ export default function Home() {
       {/* ── IMAGES ── */}
       <section className="home__images-row">
         <img src={skillsImage}  alt="Abstract tech network - Technical Skills" />
-        <img src={skillsImage2} alt="Abstract human connection network - Soft Skills" />
       </section>
 
     </div>

@@ -173,7 +173,7 @@ export default function BackOffice() {
             onClick={e => e.stopPropagation()}
           >
             <div className="modal__header">
-              <h3 className="modal__title">Message</h3>
+              <h3 className="modal__title">{t('backoffice.message')}</h3>
               <button
                 className="modal__close"
                 onClick={() => setSelected(null)}
@@ -184,7 +184,7 @@ export default function BackOffice() {
 
             <div className="modal__meta">
               <p><span>{t('backoffice.from')}</span> {selected.name}</p>
-              <p><span>Email</span> {selected.email}</p>
+              <p><span>{t('backoffice.colEmail')}</span> {selected.email}</p>
               <p><span>{t('backoffice.colDate')}</span> {formatDate(selected.created_at)}</p>
             </div>
 

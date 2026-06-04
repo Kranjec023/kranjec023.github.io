@@ -11,6 +11,10 @@
 //            glowing lines and nodes, minimal, professional, cinematic, wide"
 
 import '../styles/portfolio.css'
+import '../styles/cards.css'
+import Carousel from '../components/Carousel'
+import { FaCode, FaGraduationCap, FaChartLine, FaAward } from 'react-icons/fa'
+import { SiFreecodecamp } from 'react-icons/si'
 import bannerImage   from '../assets/heroPortfolio.png'
 import projectsImage from '../assets/projectBanner.png'
 import resumePDF     from '../assets/resume/frederick-kranjec-larose-resume.pdf'
@@ -35,13 +39,6 @@ const education = [
   },
 ]
 
-const certifications = [
-  'Legacy JavaScript Algorithms & Data Structures',
-  'AI Machine Learning and Data Science Bootcamp 2024',
-  'Bloomberg BMC',
-  'Derivatives Fundamentals & Options Licensing (DFOL)',
-  'Canadian Securities Course (CSC)',
-]
 
 const work = [
   {
@@ -80,6 +77,26 @@ const projects = [
     alt:         'Screenshot of Personal Portfolio Website',
   },
 ]
+
+const credentials = [
+  { icon: <FaCode />,         name: 'Full-Stack Bootcamp',                          issuer: 'CodeBoxx',          description: 'Intensive full-stack program covering the MERN stack, DevOps, CI/CD, and cloud deployment.' },
+  { icon: <SiFreecodecamp />, name: 'JS Algorithms & Data Structures',              issuer: 'freeCodeCamp',      description: 'Certification covering JavaScript fundamentals, algorithms, and data structure patterns.' },
+  { icon: <FaGraduationCap />,name: 'AI Machine Learning & Data Science Bootcamp', issuer: 'Zero to Mastery',   description: 'Comprehensive course on machine learning, data analysis, and AI concepts in Python.' },
+  { icon: <FaChartLine />,    name: 'Bloomberg BMC',                                issuer: 'Bloomberg',         description: 'Bloomberg Market Concepts — financial markets, economics, and data analysis.' },
+  { icon: <FaAward />,        name: 'Derivatives Fundamentals (DFOL)',              issuer: 'CSI',               description: 'Derivatives Fundamentals & Options Licensing — Canadian financial industry certification.' },
+  { icon: <FaAward />,        name: 'Canadian Securities Course (CSC)',             issuer: 'CSI',               description: 'Foundational Canadian securities license covering equities, fixed income, and funds.' },
+]
+
+function CredentialCard({ icon, name, issuer, description }) {
+  return (
+    <div className="credential-card">
+      <span className="credential-card__icon">{icon}</span>
+      <h3 className="credential-card__name">{name}</h3>
+      <p className="credential-card__issuer">{issuer}</p>
+      <p className="credential-card__desc">{description}</p>
+    </div>
+  )
+}
 
 export default function Portfolio() {
   const { t } = useLanguageContext()
@@ -121,17 +138,14 @@ export default function Portfolio() {
       </section>
 
       {/* ── SECTION 2: CERTIFICATIONS ── */}
-      <section className="portfolio__section" id="certifications">
-        <p className="portfolio__section-label">{t('portfolio.certLabel')}</p>
-        <h2 className="portfolio__section-title">{t('portfolio.certTitle')}</h2>
-        <ul className="portfolio__certifications">
-          {certifications.map(cert => (
-            <li key={cert} className="certification-item">
-              <span className="certification-item__dot">- </span>
-              {cert}
-            </li>
-          ))}
-        </ul>
+      <section className="portfolio__section" id="credentials">
+        <p className="portfolio__section-label">{t('portfolio.credentialsLabel')}</p>
+        <h2 className="portfolio__section-title">{t('portfolio.credentialsTitle')}</h2>
+        <Carousel
+          items={credentials}
+          visibleCount={3}
+          renderCard={(item, i) => <CredentialCard key={i} {...item} />}
+        />
       </section>
 
       {/* ── SECTION 3: WORK EXPERIENCE ── */}
@@ -177,7 +191,6 @@ export default function Portfolio() {
           ))}
         </div>
       </section>
-
     </div>
   )
 }

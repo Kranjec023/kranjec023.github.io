@@ -11,11 +11,11 @@ export default function Header() {
   const { language, toggleLanguage, t } = useLanguageContext()
 
   const navLinks = [
-    { label: `01. ${t('nav.home')}`,      to: '/' },
-    { label: '02. About',                 to: '/about' },
-    { label: `03. ${t('nav.portfolio')}`, to: '/portfolio' },
-    { label: `04. ${t('nav.links')}`,     to: '/links' },
-    { label: `05. ${t('nav.contact')}`,   to: '/contact' },
+    { label: t('nav.home'),      to: '/' },
+    { label: t('nav.about'),     to: '/about' },
+    { label: t('nav.portfolio'), to: '/portfolio' },
+    { label: t('nav.links'),     to: '/links' },
+    { label: t('nav.contact'),   to: '/contact' },
   ]
 
   return (

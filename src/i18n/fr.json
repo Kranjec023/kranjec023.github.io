@@ -1,6 +1,7 @@
 {
   "nav": {
     "home":      "Accueil",
+    "about":     "À Propos",
     "portfolio": "Portfolio",
     "links":     "Liens",
     "contact":   "Contact"
@@ -9,22 +10,36 @@
     "label":    "Développeur Full-Stack · Professionnel en Finance",
     "headline": "Frédérick\nKranjec-Larose",
     "sub":      "Professionnel en finance reconverti en développeur full-stack — alliant plus de 3 ans d'expérience client avec une formation pratique en MERN, Java, C#, Python, et plus encore.",
-    "cta":      "Voir le Portfolio ↗",
-    "contact":  "Me Contacter ↗"
+    "cta":       "Voir le Portfolio ↗",
+    "contact":   "Me Contacter ↗",
+    "available": "DISPONIBLE",
+    "techLabel": "Compétences Techniques",
+    "techTitle": "Ce avec quoi je construis",
+    "softLabel": "Compétences Personnelles & Talents",
+    "softTitle": "Ce que j'apporte à l'équipe"
+  },
+  "about": {
+    "label":       "À Propos",
+    "headline":    "Frédérick Kranjec-Larose",
+    "summary":     "Je suis développeur full-stack passionné par la création de systèmes fonctionnels et bien conçus. Je travaille sur l'ensemble de la stack — de la conception de bases de données aux interfaces soignées. Avec une formation en finance et comptabilité, j'apporte une approche structurée et analytique à chaque projet. Je tiens à un code lisible, une architecture réfléchie et des produits qui ont du sens à utiliser.",
+    "skillsLabel": "Compétences & Technologies",
+    "skillsTitle": "Ce avec quoi je travaille"
   },
   "portfolio": {
-    "label":          "01. Portfolio",
+    "label":          "Portfolio",
     "headline":       "Expérience & Projets",
     "sub":            "Professionnel en finance reconverti en développeur full-stack — alliant plus de 3 ans d'expérience client avec une formation pratique en MERN, Java, C#, Python, et plus encore.",
     "downloadResume": "Télécharger le CV ↗",
-    "educationLabel": "02. Formation",
+    "educationLabel": "Formation",
     "educationTitle": "Parcours Académique",
-    "certLabel":      "03. Certifications",
+    "certLabel":      "Certifications",
     "certTitle":      "Licences & Accréditations",
-    "workLabel":      "04. Expérience Professionnelle",
+    "workLabel":      "Expérience Professionnelle",
     "workTitle":      "Historique Professionnel",
-    "projectsLabel":  "05. Projets",
-    "projectsTitle":  "Ce que j'ai construit"
+    "projectsLabel":     "Projets",
+    "projectsTitle":     "Ce que j'ai construit",
+    "credentialsLabel":  "Licences & Accréditations",
+    "credentialsTitle":  "Certifications"
   },
   "links": {
     "label":    "LIENS",
@@ -66,7 +81,8 @@
     "close":      "Fermer",
     "deleteMsg":  "Supprimer le message",
     "errorFetch": "Échec du chargement des messages. Veuillez réessayer.",
-    "errorDel":   "Échec de la suppression du message."
+    "errorDel":   "Échec de la suppression du message.",
+    "message":    "Message"
   },
   "login": {
     "label":    "ADMIN",
