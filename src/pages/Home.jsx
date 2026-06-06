@@ -17,8 +17,6 @@
 
 import '../styles/home.css'
 import heroImage   from '../assets/hero-portrait.png'
-import skillsImage from '../assets/network.png'
-import skillsImage2 from '../assets/human.png'
 import { FaCode, FaDatabase, FaCloud, FaLaptopCode, FaRobot } from 'react-icons/fa'
 import { FaUsers, FaBriefcase, FaGlobe, FaPuzzlePiece, FaBolt } from 'react-icons/fa'
 import { useLanguageContext } from '../context/LanguageContext'
@@ -93,12 +91,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* ── IMAGES ── */}
-      <section className="home__images-row">
-        <img src={skillsImage}  alt="Abstract tech network - Technical Skills" />
-      </section>
-
     </div>
   )
 }
