@@ -1,0 +1,36 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.carousel__track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  flex: 1;
+}
+
+.carousel__arrow {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.carousel__arrow:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .carousel__track {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "home":      "Home",
+    "about":     "About",
+    "portfolio": "Portfolio",
+    "links":     "Links",
+    "contact":   "Contact"
+  },
+  "home": {
+    "label":    "Full-Stack Developer · Finance Professional",
+    "headline": "Frédérick\nKranjec-Larose",
+    "sub":      "Finance professional turned full-stack developer — combining 3+ years of client-facing experience with hands-on training in the MERN stack, Java, C#, Python, and more.",
+    "cta":       "View Portfolio ↗",
+    "contact":   "Get in Touch ↗",
+    "available": "AVAILABLE FOR WORK",
+    "techLabel": "Technical Skills",
+    "techTitle": "What I build with",
+    "softLabel": "Soft Skills & Talents",
+    "softTitle": "What I bring to the team"
+  },
+  "about": {
+    "label":       "About Me",
+    "headline":    "Frédérick Kranjec-Larose",
+    "summary":     "I'm a full-stack developer passionate about building clean, functional systems that solve real problems. I work across the entire stack — from database design to polished front-end interfaces. With a background in finance and accounting, I bring a structured, analytical approach to every project. I care about readable code, thoughtful architecture, and products that actually make sense to use.",
+    "skillsLabel": "Skills & Technologies",
+    "skillsTitle": "What I Work With"
+  },
+  "portfolio": {
+    "label":          "Portfolio",
+    "headline":       "Experience & Projects",
+    "sub":            "Finance professional turned full-stack developer — combining 3+ years of client-facing experience with hands-on training in the MERN stack, Java, C#, Python, and more.",
+    "downloadResume": "Download Resume ↗",
+    "educationLabel": "Education",
+    "educationTitle": "Academic Background",
+    "certLabel":      "Certifications",
+    "certTitle":      "Licences & Credentials",
+    "workLabel":      "Work Experience",
+    "workTitle":      "Professional History",
+    "projectsLabel":     "Projects",
+    "projectsTitle":     "What I've built",
+    "credentialsLabel":  "Licences & Credentials",
+    "credentialsTitle":  "Certifications"
+  },
+  "links": {
+    "label":    "LINKS",
+    "headline": "Everything in one place.",
+    "sub":      "A curated list of my profiles, resources, and projects — all accessible from one page."
+  },
+  "contact": {
+    "label":       "CONTACT",
+    "headline":    "Let's work together.",
+    "sub":         "Have a project in mind, a question, or just want to connect? Send me a message and I'll get back to you as soon as possible.",
+    "directEmail": "Or reach me directly at",
+    "name":        "Name",
+    "email":       "Email",
+    "message":     "Message",
+    "namePH":      "Frédérick Kranjec-Larose",
+    "emailPH":     "hello@example.com",
+    "messagePH":   "Tell me about your project or opportunity...",
+    "submit":      "Send Message ↗",
+    "sending":     "Sending...",
+    "success":     "Message sent! I'll get back to you soon.",
+    "errorEmpty":  "Please fill in all fields.",
+    "errorEmail":  "Please enter a valid email address.",
+    "errorFail":   "Something went wrong. Please try again."
+  },
+  "backoffice": {
+    "label":      "ADMIN",
+    "headline":   "Back Office",
+    "messages":   "Messages",
+    "noMessages": "No messages yet.",
+    "loading":    "Loading messages...",
+    "colName":    "Name",
+    "colEmail":   "Email",
+    "colDate":    "Date",
+    "colActions": "Actions",
+    "view":       "View",
+    "delete":     "Delete",
+    "logout":     "Logout ↗",
+    "from":       "From",
+    "close":      "Close",
+    "deleteMsg":  "Delete Message",
+    "errorFetch": "Failed to load messages. Please try again.",
+    "errorDel":   "Failed to delete message.",
+    "message":    "Message"
+  },
+  "login": {
+    "label":    "ADMIN",
+    "headline": "Back Office",
+    "sub":      "This page is not publicly listed.",
+    "email":    "Email",
+    "password": "Password",
+    "submit":   "Sign In ↗",
+    "loading":  "Signing in...",
+    "error":    "Invalid login credentials. Please try again."
+  }
+}

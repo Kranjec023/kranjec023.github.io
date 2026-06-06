@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "home":      "Startseite",
+    "about":     "Über mich",
+    "portfolio": "Portfolio",
+    "links":     "Links",
+    "contact":   "Kontakt"
+  },
+  "home": {
+    "label":    "Full-Stack Entwickler · Finanzfachmann",
+    "headline": "Frédérick\nKranjec-Larose",
+    "sub":      "Finanzfachmann, der zum Full-Stack-Entwickler wurde — 3+ Jahre Kundenerfahrung kombiniert mit praxisnaher Ausbildung in MERN, Java, C#, Python und mehr.",
+    "cta":       "Portfolio ansehen ↗",
+    "contact":   "Kontakt aufnehmen ↗",
+    "available": "VERFÜGBAR",
+    "techLabel": "Technische Fähigkeiten",
+    "techTitle": "Womit ich baue",
+    "softLabel": "Soft Skills & Talente",
+    "softTitle": "Was ich dem Team mitbringe"
+  },
+  "about": {
+    "label":       "Über mich",
+    "headline":    "Frédérick Kranjec-Larose",
+    "summary":     "Ich bin ein Full-Stack-Entwickler mit einer Leidenschaft für den Aufbau sauberer, funktionaler Systeme. Ich arbeite über den gesamten Stack hinweg — vom Datenbankdesign bis hin zu polierten Frontend-Oberflächen. Mit einem Hintergrund in Finanzen und Rechnungswesen bringe ich einen strukturierten, analytischen Ansatz in jedes Projekt. Mir liegt lesbarer Code, durchdachte Architektur und Produkte, die tatsächlich Sinn ergeben.",
+    "skillsLabel": "Kenntnisse & Technologien",
+    "skillsTitle": "Womit ich arbeite"
+  },
+  "portfolio": {
+    "label":          "Portfolio",
+    "headline":       "Erfahrung & Projekte",
+    "sub":            "Finanzfachmann, der zum Full-Stack-Entwickler wurde — 3+ Jahre Kundenerfahrung kombiniert mit praxisnaher Ausbildung in MERN, Java, C#, Python und mehr.",
+    "downloadResume": "Lebenslauf herunterladen ↗",
+    "educationLabel": "Ausbildung",
+    "educationTitle": "Akademischer Werdegang",
+    "certLabel":      "Zertifizierungen",
+    "certTitle":      "Lizenzen & Zeugnisse",
+    "workLabel":      "Berufserfahrung",
+    "workTitle":      "Beruflicher Werdegang",
+    "projectsLabel":     "Projekte",
+    "projectsTitle":     "Was ich gebaut habe",
+    "credentialsLabel":  "Lizenzen & Zeugnisse",
+    "credentialsTitle":  "Zertifizierungen"
+  },
+  "links": {
+    "label":    "LINKS",
+    "headline": "Alles an einem Ort.",
+    "sub":      "Eine kuratierte Liste meiner Profile, Ressourcen und Projekte — alles von einer Seite aus zugänglich."
+  },
+  "contact": {
+    "label":       "KONTAKT",
+    "headline":    "Lass uns zusammenarbeiten.",
+    "sub":         "Haben Sie ein Projekt, eine Frage oder möchten Sie sich einfach vernetzen? Schicken Sie mir eine Nachricht und ich melde mich so schnell wie möglich.",
+    "directEmail": "Oder erreichen Sie mich direkt unter",
+    "name":        "Name",
+    "email":       "E-Mail",
+    "message":     "Nachricht",
+    "namePH":      "Frédérick Kranjec-Larose",
+    "emailPH":     "hallo@beispiel.com",
+    "messagePH":   "Erzählen Sie mir von Ihrem Projekt oder Ihrer Anfrage...",
+    "submit":      "Nachricht senden ↗",
+    "sending":     "Wird gesendet...",
+    "success":     "Nachricht gesendet! Ich melde mich bald.",
+    "errorEmpty":  "Bitte füllen Sie alle Felder aus.",
+    "errorEmail":  "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "errorFail":   "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  "backoffice": {
+    "label":      "ADMIN",
+    "headline":   "Verwaltungsbereich",
+    "messages":   "Nachrichten",
+    "noMessages": "Noch keine Nachrichten.",
+    "loading":    "Nachrichten werden geladen...",
+    "colName":    "Name",
+    "colEmail":   "E-Mail",
+    "colDate":    "Datum",
+    "colActions": "Aktionen",
+    "view":       "Ansehen",
+    "delete":     "Löschen",
+    "logout":     "Abmelden ↗",
+    "from":       "Von",
+    "close":      "Schließen",
+    "deleteMsg":  "Nachricht löschen",
+    "errorFetch": "Nachrichten konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
+    "errorDel":   "Nachricht konnte nicht gelöscht werden.",
+    "message":    "Nachricht"
+  },
+  "login": {
+    "label":    "ADMIN",
+    "headline": "Verwaltungsbereich",
+    "sub":      "Diese Seite ist nicht öffentlich gelistet.",
+    "email":    "E-Mail",
+    "password": "Passwort",
+    "submit":   "Anmelden ↗",
+    "loading":  "Anmeldung läuft...",
+    "error":    "Ungültige Anmeldedaten. Bitte versuchen Sie es erneut."
+  }
+}

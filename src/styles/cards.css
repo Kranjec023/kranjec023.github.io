@@ -1,0 +1,63 @@
+/* ── SHARED CARD BASE ── */
+.link-card,
+.credential-card,
+.skill-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.2s;
+}
+
+.link-card:hover,
+.credential-card:hover,
+.skill-card:hover {
+  border-color: var(--color-text-primary);
+}
+
+/* ── ICONS ── */
+.link-card__icon,
+.credential-card__icon,
+.skill-card__icon {
+  font-size: 2rem;
+  color: var(--color-text-primary);
+}
+
+/* ── NAME ── */
+.link-card__name,
+.credential-card__name,
+.skill-card__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* ── MUTED SUB-TEXT ── */
+.link-card__desc,
+.credential-card__issuer,
+.credential-card__desc,
+.skill-card__desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.link-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-card__arrow {
+  margin-top: auto;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.link-card__img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 6px;
+}
